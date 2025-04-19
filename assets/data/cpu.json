@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Intel Core i9-12900K",
+    "brand": "Intel",
+    "cores": 16,
+    "clockSpeed": 3.2,
+    "tdp": 125,
+    "benchmarkScore": 27000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "AMD Ryzen 9 5950X",
+    "brand": "AMD",
+    "cores": 16,
+    "clockSpeed": 3.4,
+    "tdp": 105,
+    "benchmarkScore": 25500,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "Intel Core i7-12700K",
+    "brand": "Intel",
+    "cores": 12,
+    "clockSpeed": 3.6,
+    "tdp": 125,
+    "benchmarkScore": 20000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 4,
+    "name": "AMD Ryzen 7 5800X",
+    "brand": "AMD",
+    "cores": 8,
+    "clockSpeed": 3.8,
+    "tdp": 105,
+    "benchmarkScore": 18500,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 5,
+    "name": "Intel Core i5-12600K",
+    "brand": "Intel",
+    "cores": 10,
+    "clockSpeed": 3.7,
+    "tdp": 125,
+    "benchmarkScore": 16000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "AutoCAD"],
+    "useCase": "Editing"
+  },
+  {
+    "id": 6,
+    "name": "AMD Ryzen 5 5600X",
+    "brand": "AMD",
+    "cores": 6,
+    "clockSpeed": 3.7,
+    "tdp": 65,
+    "benchmarkScore": 14500,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "AutoCAD"],
+    "useCase": "Editing"
+  },
+  {
+    "id": 7,
+    "name": "Intel Core i9-11900K",
+    "brand": "Intel",
+    "cores": 8,
+    "clockSpeed": 3.5,
+    "tdp": 125,
+    "benchmarkScore": 19000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit", "SolidWorks"],
+    "useCase": "CAD"
+  },
+  {
+    "id": 8,
+    "name": "AMD Ryzen 9 5900X",
+    "brand": "AMD",
+    "cores": 12,
+    "clockSpeed": 3.7,
+    "tdp": 105,
+    "benchmarkScore": 22000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit", "SolidWorks"],
+    "useCase": "CAD"
+  },
+  {
+    "id": 9,
+    "name": "Intel Core i3-12100",
+    "brand": "Intel",
+    "cores": 4,
+    "clockSpeed": 3.3,
+    "tdp": 60,
+    "benchmarkScore": 9000,
+    "supportedSoftware": ["Microsoft Office", "Web Browsing", "Light Gaming"],
+    "useCase": "Office"
+  },
+  {
+    "id": 10,
+    "name": "AMD Ryzen 3 5300G",
+    "brand": "AMD",
+    "cores": 4,
+    "clockSpeed": 4.0,
+    "tdp": 65,
+    "benchmarkScore": 8500,
+    "supportedSoftware": ["Microsoft Office", "Web Browsing", "Light Gaming"],
+    "useCase": "Office"
+  }
+]

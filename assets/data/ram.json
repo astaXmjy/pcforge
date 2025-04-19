@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Corsair Vengeance RGB Pro 32GB",
+    "brand": "Corsair",
+    "capacity": 32,
+    "type": "DDR4",
+    "speed": 3600,
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "G.Skill Trident Z RGB 32GB",
+    "brand": "G.Skill",
+    "capacity": 32,
+    "type": "DDR4",
+    "speed": 3200,
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "Crucial Ballistix 16GB",
+    "brand": "Crucial",
+    "capacity": 16,
+    "type": "DDR4",
+    "speed": 3200,
+    "useCase": "Gaming"
+  },
+  {
+    "id": 4,
+    "name": "Kingston HyperX Fury 16GB",
+    "brand": "Kingston",
+    "capacity": 16,
+    "type": "DDR4",
+    "speed": 3000,
+    "useCase": "Gaming"
+  },
+  {
+    "id": 5,
+    "name": "Corsair Vengeance LPX 64GB",
+    "brand": "Corsair",
+    "capacity": 64,
+    "type": "DDR4",
+    "speed": 3200,
+    "useCase": "Editing"
+  },
+  {
+    "id": 6,
+    "name": "G.Skill Ripjaws V 32GB",
+    "brand": "G.Skill",
+    "capacity": 32,
+    "type": "DDR4",
+    "speed": 3600,
+    "useCase": "Editing"
+  },
+  {
+    "id": 7,
+    "name": "Crucial 64GB ECC",
+    "brand": "Crucial",
+    "capacity": 64,
+    "type": "DDR4 ECC",
+    "speed": 2666,
+    "useCase": "CAD"
+  },
+  {
+    "id": 8,
+    "name": "Kingston Server Premier 32GB ECC",
+    "brand": "Kingston",
+    "capacity": 32,
+    "type": "DDR4 ECC",
+    "speed": 2933,
+    "useCase": "CAD"
+  },
+  {
+    "id": 9,
+    "name": "Crucial 8GB",
+    "brand": "Crucial",
+    "capacity": 8,
+    "type": "DDR4",
+    "speed": 2666,
+    "useCase": "Office"
+  },
+  {
+    "id": 10,
+    "name": "Kingston ValueRAM 8GB",
+    "brand": "Kingston",
+    "capacity": 8,
+    "type": "DDR4",
+    "speed": 2400,
+    "useCase": "Office"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Samsung 970 EVO Plus 1TB",
+    "brand": "Samsung",
+    "capacity": 1000,
+    "type": "SSD",
+    "interface": "NVMe",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "WD Black SN850 1TB",
+    "brand": "Western Digital",
+    "capacity": 1000,
+    "type": "SSD",
+    "interface": "NVMe",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "Crucial P5 500GB",
+    "brand": "Crucial",
+    "capacity": 500,
+    "type": "SSD",
+    "interface": "NVMe",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 4,
+    "name": "Seagate Barracuda 2TB",
+    "brand": "Seagate",
+    "capacity": 2000,
+    "type": "HDD",
+    "interface": "SATA",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 5,
+    "name": "Samsung 980 Pro 2TB",
+    "brand": "Samsung",
+    "capacity": 2000,
+    "type": "SSD",
+    "interface": "NVMe",
+    "useCase": "Editing"
+  },
+  {
+    "id": 6,
+    "name": "WD Black 4TB",
+    "brand": "Western Digital",
+    "capacity": 4000,
+    "type": "HDD",
+    "interface": "SATA",
+    "useCase": "Editing"
+  },
+  {
+    "id": 7,
+    "name": "Samsung 870 QVO 8TB",
+    "brand": "Samsung",
+    "capacity": 8000,
+    "type": "SSD",
+    "interface": "SATA",
+    "useCase": "CAD"
+  },
+  {
+    "id": 8,
+    "name": "Intel Optane 905P 480GB",
+    "brand": "Intel",
+    "capacity": 480,
+    "type": "SSD",
+    "interface": "NVMe",
+    "useCase": "CAD"
+  },
+  {
+    "id": 9,
+    "name": "Crucial MX500 250GB",
+    "brand": "Crucial",
+    "capacity": 250,
+    "type": "SSD",
+    "interface": "SATA",
+    "useCase": "Office"
+  },
+  {
+    "id": 10,
+    "name": "WD Blue 1TB",
+    "brand": "Western Digital",
+    "capacity": 1000,
+    "type": "HDD",
+    "interface": "SATA",
+    "useCase": "Office"
+  }
+]

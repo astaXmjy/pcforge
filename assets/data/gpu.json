@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "NVIDIA GeForce RTX 3090",
+    "brand": "NVIDIA",
+    "vram": 24,
+    "tdp": 350,
+    "benchmarkScore": 22000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit", "SolidWorks"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "AMD Radeon RX 6900 XT",
+    "brand": "AMD",
+    "vram": 16,
+    "tdp": 300,
+    "benchmarkScore": 20000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "NVIDIA GeForce RTX 3080",
+    "brand": "NVIDIA",
+    "vram": 10,
+    "tdp": 320,
+    "benchmarkScore": 18000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 4,
+    "name": "AMD Radeon RX 6800 XT",
+    "brand": "AMD",
+    "vram": 16,
+    "tdp": 300,
+    "benchmarkScore": 17000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 5,
+    "name": "NVIDIA GeForce RTX 3070",
+    "brand": "NVIDIA",
+    "vram": 8,
+    "tdp": 220,
+    "benchmarkScore": 14000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD"],
+    "useCase": "Editing"
+  },
+  {
+    "id": 6,
+    "name": "AMD Radeon RX 6700 XT",
+    "brand": "AMD",
+    "vram": 12,
+    "tdp": 230,
+    "benchmarkScore": 13000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "AutoCAD"],
+    "useCase": "Editing"
+  },
+  {
+    "id": 7,
+    "name": "NVIDIA Quadro RTX 5000",
+    "brand": "NVIDIA",
+    "vram": 16,
+    "tdp": 265,
+    "benchmarkScore": 16000,
+    "supportedSoftware": ["AutoCAD", "Revit", "SolidWorks", "CATIA", "Blender"],
+    "useCase": "CAD"
+  },
+  {
+    "id": 8,
+    "name": "AMD Radeon Pro W6800",
+    "brand": "AMD",
+    "vram": 32,
+    "tdp": 250,
+    "benchmarkScore": 15000,
+    "supportedSoftware": ["AutoCAD", "Revit", "SolidWorks", "CATIA", "Blender"],
+    "useCase": "CAD"
+  },
+  {
+    "id": 9,
+    "name": "NVIDIA GeForce GTX 1650",
+    "brand": "NVIDIA",
+    "vram": 4,
+    "tdp": 75,
+    "benchmarkScore": 6000,
+    "supportedSoftware": ["Microsoft Office", "Web Browsing", "Light Gaming"],
+    "useCase": "Office"
+  },
+  {
+    "id": 10,
+    "name": "AMD Radeon RX 550",
+    "brand": "AMD",
+    "vram": 4,
+    "tdp": 50,
+    "benchmarkScore": 3000,
+    "supportedSoftware": ["Microsoft Office", "Web Browsing", "Light Gaming"],
+    "useCase": "Office"
+  }
+]

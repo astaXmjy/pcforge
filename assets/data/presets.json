@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "High-End Gaming PC",
+    "type": "PC",
+    "useCase": "Gaming",
+    "cpuId": 1,
+    "gpuId": 1,
+    "ramId": 1,
+    "storageId": 1,
+    "motherboardId": 1,
+    "psuId": 1
+  },
+  {
+    "id": 2,
+    "name": "Mid-Range Gaming PC",
+    "type": "PC",
+    "useCase": "Gaming",
+    "cpuId": 3,
+    "gpuId": 3,
+    "ramId": 3,
+    "storageId": 3,
+    "motherboardId": 2,
+    "psuId": 3
+  },
+  {
+    "id": 3,
+    "name": "High-End Gaming Laptop",
+    "type": "Laptop",
+    "useCase": "Gaming",
+    "cpuId": 1,
+    "gpuId": 1,
+    "ramId": 1,
+    "storageId": 1,
+    "motherboardId": 1,
+    "psuId": null
+  },
+  {
+    "id": 4,
+    "name": "Mid-Range Gaming Laptop",
+    "type": "Laptop",
+    "useCase": "Gaming",
+    "cpuId": 3,
+    "gpuId": 3,
+    "ramId": 3,
+    "storageId": 3,
+    "motherboardId": 2,
+    "psuId": null
+  },
+  {
+    "id": 5,
+    "name": "Professional Video Editing PC",
+    "type": "PC",
+    "useCase": "Editing",
+    "cpuId": 2,
+    "gpuId": 5,
+    "ramId": 5,
+    "storageId": 5,
+    "motherboardId": 5,
+    "psuId": 5
+  },
+  {
+    "id": 6,
+    "name": "Professional Video Editing Laptop",
+    "type": "Laptop",
+    "useCase": "Editing",
+    "cpuId": 2,
+    "gpuId": 5,
+    "ramId": 5,
+    "storageId": 5,
+    "motherboardId": 5,
+    "psuId": null
+  },
+  {
+    "id": 7,
+    "name": "CAD Workstation PC",
+    "type": "PC",
+    "useCase": "CAD",
+    "cpuId": 8,
+    "gpuId": 7,
+    "ramId": 7,
+    "storageId": 7,
+    "motherboardId": 7,
+    "psuId": 7
+  },
+  {
+    "id": 8,
+    "name": "CAD Workstation Laptop",
+    "type": "Laptop",
+    "useCase": "CAD",
+    "cpuId": 8,
+    "gpuId": 7,
+    "ramId": 7,
+    "storageId": 7,
+    "motherboardId": 7,
+    "psuId": null
+  },
+  {
+    "id": 9,
+    "name": "Office PC",
+    "type": "PC",
+    "useCase": "Office",
+    "cpuId": 9,
+    "gpuId": 9,
+    "ramId": 9,
+    "storageId": 9,
+    "motherboardId": 9,
+    "psuId": 9
+  },
+  {
+    "id": 10,
+    "name": "Office Laptop",
+    "type": "Laptop",
+    "useCase": "Office",
+    "cpuId": 9,
+    "gpuId": 9,
+    "ramId": 9,
+    "storageId": 9,
+    "motherboardId": 9,
+    "psuId": null
+  }
+]

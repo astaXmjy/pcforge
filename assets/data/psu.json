@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Corsair RM850x",
+    "brand": "Corsair",
+    "wattage": 850,
+    "certification": "80+ Gold",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "EVGA SuperNOVA 750 G5",
+    "brand": "EVGA",
+    "wattage": 750,
+    "certification": "80+ Gold",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "Seasonic FOCUS GX-650",
+    "brand": "Seasonic",
+    "wattage": 650,
+    "certification": "80+ Gold",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 4,
+    "name": "be quiet! Straight Power 11 550W",
+    "brand": "be quiet!",
+    "wattage": 550,
+    "certification": "80+ Gold",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 5,
+    "name": "Corsair AX1000",
+    "brand": "Corsair",
+    "wattage": 1000,
+    "certification": "80+ Titanium",
+    "useCase": "Editing"
+  },
+  {
+    "id": 6,
+    "name": "Seasonic PRIME TX-850",
+    "brand": "Seasonic",
+    "wattage": 850,
+    "certification": "80+ Titanium",
+    "useCase": "Editing"
+  },
+  {
+    "id": 7,
+    "name": "EVGA SuperNOVA 1200 P2",
+    "brand": "EVGA",
+    "wattage": 1200,
+    "certification": "80+ Platinum",
+    "useCase": "CAD"
+  },
+  {
+    "id": 8,
+    "name": "Corsair HX1000i",
+    "brand": "Corsair",
+    "wattage": 1000,
+    "certification": "80+ Platinum",
+    "useCase": "CAD"
+  },
+  {
+    "id": 9,
+    "name": "Corsair CX450",
+    "brand": "Corsair",
+    "wattage": 450,
+    "certification": "80+ Bronze",
+    "useCase": "Office"
+  },
+  {
+    "id": 10,
+    "name": "EVGA 500 W1",
+    "brand": "EVGA",
+    "wattage": 500,
+    "certification": "80+ White",
+    "useCase": "Office"
+  }
+]

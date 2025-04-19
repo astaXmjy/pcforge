@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "ASUS ROG Maximus Z690 Hero",
+    "brand": "ASUS",
+    "chipset": "Z690",
+    "socketType": "LGA1700",
+    "formFactor": "ATX",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "MSI MPG Z690 Gaming Carbon WiFi",
+    "brand": "MSI",
+    "chipset": "Z690",
+    "socketType": "LGA1700",
+    "formFactor": "ATX",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "ASUS ROG Crosshair VIII Dark Hero",
+    "brand": "ASUS",
+    "chipset": "X570",
+    "socketType": "AM4",
+    "formFactor": "ATX",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 4,
+    "name": "Gigabyte X570 AORUS Master",
+    "brand": "Gigabyte",
+    "chipset": "X570",
+    "socketType": "AM4",
+    "formFactor": "ATX",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 5,
+    "name": "ASUS ProArt Z690-Creator WiFi",
+    "brand": "ASUS",
+    "chipset": "Z690",
+    "socketType": "LGA1700",
+    "formFactor": "ATX",
+    "useCase": "Editing"
+  },
+  {
+    "id": 6,
+    "name": "MSI Creator X570",
+    "brand": "MSI",
+    "chipset": "X570",
+    "socketType": "AM4",
+    "formFactor": "ATX",
+    "useCase": "Editing"
+  },
+  {
+    "id": 7,
+    "name": "ASUS WS X299 Sage",
+    "brand": "ASUS",
+    "chipset": "X299",
+    "socketType": "LGA2066",
+    "formFactor": "ATX",
+    "useCase": "CAD"
+  },
+  {
+    "id": 8,
+    "name": "Supermicro X12SAE",
+    "brand": "Supermicro",
+    "chipset": "W580",
+    "socketType": "LGA1200",
+    "formFactor": "ATX",
+    "useCase": "CAD"
+  },
+  {
+    "id": 9,
+    "name": "ASUS Prime B660M-A",
+    "brand": "ASUS",
+    "chipset": "B660",
+    "socketType": "LGA1700",
+    "formFactor": "Micro-ATX",
+    "useCase": "Office"
+  },
+  {
+    "id": 10,
+    "name": "MSI B550M PRO-VDH WiFi",
+    "brand": "MSI",
+    "chipset": "B550",
+    "socketType": "AM4",
+    "formFactor": "Micro-ATX",
+    "useCase": "Office"
+  }
+]
