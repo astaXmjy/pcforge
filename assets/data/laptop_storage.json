@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "2TB Samsung 980 Pro",
+    "brand": "Samsung",
+    "capacity": 2000,
+    "type": "SSD",
+    "interface": "NVMe PCIe 4.0",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "1TB WD Black SN850",
+    "brand": "Western Digital",
+    "capacity": 1000,
+    "type": "SSD",
+    "interface": "NVMe PCIe 4.0",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "4TB Samsung 980 Pro",
+    "brand": "Samsung",
+    "capacity": 4000,
+    "type": "SSD",
+    "interface": "NVMe PCIe 4.0",
+    "useCase": "Editing"
+  },
+  {
+    "id": 4,
+    "name": "2TB WD Black SN850",
+    "brand": "Western Digital",
+    "capacity": 2000,
+    "type": "SSD",
+    "interface": "NVMe PCIe 4.0",
+    "useCase": "Editing"
+  },
+  {
+    "id": 5,
+    "name": "4TB Samsung 980 Pro",
+    "brand": "Samsung",
+    "capacity": 4000,
+    "type": "SSD",
+    "interface": "NVMe PCIe 4.0",
+    "useCase": "CAD"
+  },
+  {
+    "id": 6,
+    "name": "2TB WD Black SN850",
+    "brand": "Western Digital",
+    "capacity": 2000,
+    "type": "SSD",
+    "interface": "NVMe PCIe 4.0",
+    "useCase": "CAD"
+  },
+  {
+    "id": 7,
+    "name": "1TB Samsung 980",
+    "brand": "Samsung",
+    "capacity": 1000,
+    "type": "SSD",
+    "interface": "NVMe PCIe 3.0",
+    "useCase": "Office"
+  },
+  {
+    "id": 8,
+    "name": "512GB WD Blue SN570",
+    "brand": "Western Digital",
+    "capacity": 512,
+    "type": "SSD",
+    "interface": "NVMe PCIe 3.0",
+    "useCase": "Office"
+  }
+]

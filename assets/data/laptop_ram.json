@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "32GB DDR5 4800MHz",
+    "brand": "Kingston",
+    "capacity": 32,
+    "type": "DDR5",
+    "speed": 4800,
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "16GB DDR5 4800MHz",
+    "brand": "Samsung",
+    "capacity": 16,
+    "type": "DDR5",
+    "speed": 4800,
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "64GB DDR5 4800MHz",
+    "brand": "Crucial",
+    "capacity": 64,
+    "type": "DDR5",
+    "speed": 4800,
+    "useCase": "Editing"
+  },
+  {
+    "id": 4,
+    "name": "32GB DDR5 4800MHz",
+    "brand": "Micron",
+    "capacity": 32,
+    "type": "DDR5",
+    "speed": 4800,
+    "useCase": "Editing"
+  },
+  {
+    "id": 5,
+    "name": "64GB DDR4 3200MHz ECC",
+    "brand": "Kingston",
+    "capacity": 64,
+    "type": "DDR4 ECC",
+    "speed": 3200,
+    "useCase": "CAD"
+  },
+  {
+    "id": 6,
+    "name": "32GB DDR4 3200MHz ECC",
+    "brand": "Samsung",
+    "capacity": 32,
+    "type": "DDR4 ECC",
+    "speed": 3200,
+    "useCase": "CAD"
+  },
+  {
+    "id": 7,
+    "name": "16GB LPDDR5 6400MHz",
+    "brand": "Samsung",
+    "capacity": 16,
+    "type": "LPDDR5",
+    "speed": 6400,
+    "useCase": "Office"
+  },
+  {
+    "id": 8,
+    "name": "8GB LPDDR5 6400MHz",
+    "brand": "Micron",
+    "capacity": 8,
+    "type": "LPDDR5",
+    "speed": 6400,
+    "useCase": "Office"
+  }
+]

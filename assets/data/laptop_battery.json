@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "99.9 Wh Gaming Battery",
+    "capacity": 99900,
+    "batteryLife": 4,
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "90 Wh Gaming Battery",
+    "capacity": 90000,
+    "batteryLife": 5,
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "99.9 Wh Professional Battery",
+    "capacity": 99900,
+    "batteryLife": 5,
+    "useCase": "Editing"
+  },
+  {
+    "id": 4,
+    "name": "90 Wh Professional Battery",
+    "capacity": 90000,
+    "batteryLife": 6,
+    "useCase": "Editing"
+  },
+  {
+    "id": 5,
+    "name": "95 Wh CAD Battery",
+    "capacity": 95000,
+    "batteryLife": 5,
+    "useCase": "CAD"
+  },
+  {
+    "id": 6,
+    "name": "85 Wh CAD Battery",
+    "capacity": 85000,
+    "batteryLife": 6,
+    "useCase": "CAD"
+  },
+  {
+    "id": 7,
+    "name": "72 Wh Office Battery",
+    "capacity": 72000,
+    "batteryLife": 10,
+    "useCase": "Office"
+  },
+  {
+    "id": 8,
+    "name": "58 Wh Office Battery",
+    "capacity": 58000,
+    "batteryLife": 8,
+    "useCase": "Office"
+  }
+]

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../data/repositories/component_repository.dart';
 import 'preset_build_details_screen.dart';
+import 'laptop_preset_details_screen.dart';
 
 class PresetSelectionScreen extends StatelessWidget {
   final String buildType; // 'PC' or 'Laptop'
@@ -29,6 +30,30 @@ class PresetSelectionScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(height: 12),
+            // Show tip for laptop builds
+            if (buildType == 'Laptop')
+              Card(
+                color: Colors.blue.shade50,
+                elevation: 2,
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
+                    children: [
+                      Icon(Icons.lightbulb, color: Colors.amber.shade700),
+                      const SizedBox(width: 8),
+                      const Expanded(
+                        child: Text(
+                          "TIP: IF YOU'RE A CURRENT OR ASPIRING DEVELOPER, DESIGNER, OR ARCHITECT, THE GAMING PRESET IS YOUR BEST CHOICE.",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             const SizedBox(height: 20),
             Expanded(
               child: GridView.count(
@@ -84,25 +109,121 @@ class PresetSelectionScreen extends StatelessWidget {
         onTap: () async {
           final repository =
               Provider.of<ComponentRepository>(context, listen: false);
-          final presets = await repository.getPresetBuildsByTypeAndUseCase(
-              buildType, useCase);
 
-          if (presets.isNotEmpty) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => PresetBuildDetailsScreen(
-                  preset: presets.first,
-                  buildType: buildType,
+          if (buildType == 'Laptop') {
+            // Use laptop presets for laptop builds
+            final laptopPresets = await repository
+                .getLaptopPresetBuildsByTypeAndUseCase(buildType, useCase);
+
+            if (laptopPresets.isNotEmpty) {
+              // Navigate to correct preset details screen based on build type
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LaptopPresetDetailsScreen(
+                    preset: laptopPresets.first,
+                    buildType: buildType,
+                  ),
                 ),
-              ),
-            );
+              );
+            } else {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content:
+                      Text('No laptop presets available for this use case'),
+                ),
+              );
+            }
           } else {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('No presets available for this use case'),
-              ),
-            );
+            // Use PC presets for PC builds
+            final presets = await repository.getPresetBuildsByTypeAndUseCase(
+                buildType, useCase);
+
+            if (presets.isNotEmpty) {
+              // Find both high-end and mid-range presets
+              final highEndPreset = presets.firstWhere(
+                (preset) => preset.name.toLowerCase().contains('high'),
+                orElse: () => presets.first,
+              );
+
+              final midRangePreset = presets.firstWhere(
+                (preset) => preset.name.toLowerCase().contains('mid'),
+                orElse: () => presets.first,
+              );
+
+              // Show dialog to choose between high-end and mid-range if both exist
+              if (highEndPreset.id != midRangePreset.id) {
+                // Both high-end and mid-range presets exist, show selection dialog
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: Text('Select $useCase PC Type'),
+                      content: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ListTile(
+                            title: const Text('High-End'),
+                            subtitle:
+                                const Text('Best performance, higher cost'),
+                            leading: const Icon(Icons.star),
+                            onTap: () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      PresetBuildDetailsScreen(
+                                    preset: highEndPreset,
+                                    buildType: buildType,
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                          ListTile(
+                            title: const Text('Mid-Range'),
+                            subtitle:
+                                const Text('Good performance, moderate cost'),
+                            leading: const Icon(Icons.thumb_up),
+                            onTap: () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      PresetBuildDetailsScreen(
+                                    preset: midRangePreset,
+                                    buildType: buildType,
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                );
+              } else {
+                // Only one preset exists, navigate directly
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PresetBuildDetailsScreen(
+                      preset: presets.first,
+                      buildType: buildType,
+                    ),
+                  ),
+                );
+              }
+            } else {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('No presets available for this use case'),
+                ),
+              );
+            }
           }
         },
         borderRadius: BorderRadius.circular(15),

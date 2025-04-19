@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Intel Core i9-12900HK",
+    "brand": "Intel",
+    "cores": 14,
+    "clockSpeed": 2.5,
+    "tdp": 45,
+    "benchmarkScore": 24500,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "AMD Ryzen 9 6900HX",
+    "brand": "AMD",
+    "cores": 8,
+    "clockSpeed": 3.3,
+    "tdp": 45,
+    "benchmarkScore": 23000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "Intel Core i9-12950HX",
+    "brand": "Intel",
+    "cores": 16,
+    "clockSpeed": 2.3,
+    "tdp": 55,
+    "benchmarkScore": 25800,
+    "supportedSoftware": ["Adobe Premiere Pro", "DaVinci Resolve", "Blender", "Maya", "After Effects"],
+    "useCase": "Editing"
+  },
+  {
+    "id": 4,
+    "name": "AMD Ryzen 9 6980HX",
+    "brand": "AMD",
+    "cores": 8,
+    "clockSpeed": 3.3,
+    "tdp": 45,
+    "benchmarkScore": 24200,
+    "supportedSoftware": ["Adobe Premiere Pro", "DaVinci Resolve", "Blender", "Maya", "After Effects"],
+    "useCase": "Editing"
+  },
+  {
+    "id": 5,
+    "name": "Intel Xeon W-11955M",
+    "brand": "Intel",
+    "cores": 8,
+    "clockSpeed": 2.6,
+    "tdp": 45,
+    "benchmarkScore": 23000,
+    "supportedSoftware": ["AutoCAD", "Revit", "SolidWorks", "CATIA", "Blender"],
+    "useCase": "CAD"
+  },
+  {
+    "id": 6,
+    "name": "AMD Ryzen 9 6900HS",
+    "brand": "AMD",
+    "cores": 8,
+    "clockSpeed": 3.3,
+    "tdp": 35,
+    "benchmarkScore": 21500,
+    "supportedSoftware": ["AutoCAD", "Revit", "SolidWorks", "Blender"],
+    "useCase": "CAD"
+  },
+  {
+    "id": 7,
+    "name": "Intel Core i7-1260P",
+    "brand": "Intel",
+    "cores": 12,
+    "clockSpeed": 2.1,
+    "tdp": 28,
+    "benchmarkScore": 17000,
+    "supportedSoftware": ["Microsoft Office", "Web Browsing", "Light Gaming", "Adobe Photoshop"],
+    "useCase": "Office"
+  },
+  {
+    "id": 8,
+    "name": "AMD Ryzen 7 6800U",
+    "brand": "AMD",
+    "cores": 8,
+    "clockSpeed": 2.7,
+    "tdp": 28,
+    "benchmarkScore": 16000,
+    "supportedSoftware": ["Microsoft Office", "Web Browsing", "Light Gaming", "Adobe Photoshop"],
+    "useCase": "Office"
+  }
+]

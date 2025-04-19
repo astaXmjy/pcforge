@@ -1,3 +1,417 @@
+// Add these classes to the component_models.dart file
+
+class LaptopCPU {
+  final int id;
+  final String name;
+  final String brand;
+  final int cores;
+  final double clockSpeed;
+  final int tdp;
+  final double benchmarkScore;
+  final List<String> supportedSoftware;
+  final String useCase;
+
+  LaptopCPU({
+    required this.id,
+    required this.name,
+    required this.brand,
+    required this.cores,
+    required this.clockSpeed,
+    required this.tdp,
+    required this.benchmarkScore,
+    required this.supportedSoftware,
+    required this.useCase,
+  });
+
+  factory LaptopCPU.fromJson(Map<String, dynamic> json) {
+    return LaptopCPU(
+      id: json['id'],
+      name: json['name'],
+      brand: json['brand'],
+      cores: json['cores'],
+      clockSpeed: json['clockSpeed'],
+      tdp: json['tdp'],
+      benchmarkScore: json['benchmarkScore'].toDouble(),
+      supportedSoftware: List<String>.from(json['supportedSoftware']),
+      useCase: json['useCase'],
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'brand': brand,
+      'cores': cores,
+      'clockSpeed': clockSpeed,
+      'tdp': tdp,
+      'benchmarkScore': benchmarkScore,
+      'supportedSoftware': supportedSoftware.join(','),
+      'useCase': useCase,
+    };
+  }
+
+  factory LaptopCPU.fromMap(Map<String, dynamic> map) {
+    return LaptopCPU(
+      id: map['id'],
+      name: map['name'],
+      brand: map['brand'],
+      cores: map['cores'],
+      clockSpeed: map['clockSpeed'],
+      tdp: map['tdp'],
+      benchmarkScore: map['benchmarkScore'],
+      supportedSoftware: map['supportedSoftware'].split(','),
+      useCase: map['useCase'],
+    );
+  }
+}
+
+class LaptopGPU {
+  final int id;
+  final String name;
+  final String brand;
+  final int vram;
+  final int tdp;
+  final double benchmarkScore;
+  final List<String> supportedSoftware;
+  final String useCase;
+
+  LaptopGPU({
+    required this.id,
+    required this.name,
+    required this.brand,
+    required this.vram,
+    required this.tdp,
+    required this.benchmarkScore,
+    required this.supportedSoftware,
+    required this.useCase,
+  });
+
+  factory LaptopGPU.fromJson(Map<String, dynamic> json) {
+    return LaptopGPU(
+      id: json['id'],
+      name: json['name'],
+      brand: json['brand'],
+      vram: json['vram'],
+      tdp: json['tdp'],
+      benchmarkScore: json['benchmarkScore'].toDouble(),
+      supportedSoftware: List<String>.from(json['supportedSoftware']),
+      useCase: json['useCase'],
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'brand': brand,
+      'vram': vram,
+      'tdp': tdp,
+      'benchmarkScore': benchmarkScore,
+      'supportedSoftware': supportedSoftware.join(','),
+      'useCase': useCase,
+    };
+  }
+
+  factory LaptopGPU.fromMap(Map<String, dynamic> map) {
+    return LaptopGPU(
+      id: map['id'],
+      name: map['name'],
+      brand: map['brand'],
+      vram: map['vram'],
+      tdp: map['tdp'],
+      benchmarkScore: map['benchmarkScore'],
+      supportedSoftware: map['supportedSoftware'].split(','),
+      useCase: map['useCase'],
+    );
+  }
+}
+
+class LaptopRAM {
+  final int id;
+  final String name;
+  final String brand;
+  final int capacity;
+  final String type;
+  final int speed;
+  final String useCase;
+
+  LaptopRAM({
+    required this.id,
+    required this.name,
+    required this.brand,
+    required this.capacity,
+    required this.type,
+    required this.speed,
+    required this.useCase,
+  });
+
+  factory LaptopRAM.fromJson(Map<String, dynamic> json) {
+    return LaptopRAM(
+      id: json['id'],
+      name: json['name'],
+      brand: json['brand'],
+      capacity: json['capacity'],
+      type: json['type'],
+      speed: json['speed'],
+      useCase: json['useCase'],
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'brand': brand,
+      'capacity': capacity,
+      'type': type,
+      'speed': speed,
+      'useCase': useCase,
+    };
+  }
+
+  factory LaptopRAM.fromMap(Map<String, dynamic> map) {
+    return LaptopRAM(
+      id: map['id'],
+      name: map['name'],
+      brand: map['brand'],
+      capacity: map['capacity'],
+      type: map['type'],
+      speed: map['speed'],
+      useCase: map['useCase'],
+    );
+  }
+}
+
+class LaptopStorage {
+  final int id;
+  final String name;
+  final String brand;
+  final int capacity;
+  final String type;
+  final String interface;
+  final String useCase;
+
+  LaptopStorage({
+    required this.id,
+    required this.name,
+    required this.brand,
+    required this.capacity,
+    required this.type,
+    required this.interface,
+    required this.useCase,
+  });
+
+  factory LaptopStorage.fromJson(Map<String, dynamic> json) {
+    return LaptopStorage(
+      id: json['id'],
+      name: json['name'],
+      brand: json['brand'],
+      capacity: json['capacity'],
+      type: json['type'],
+      interface: json['interface'],
+      useCase: json['useCase'],
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'brand': brand,
+      'capacity': capacity,
+      'type': type,
+      'interface': interface,
+      'useCase': useCase,
+    };
+  }
+
+  factory LaptopStorage.fromMap(Map<String, dynamic> map) {
+    return LaptopStorage(
+      id: map['id'],
+      name: map['name'],
+      brand: map['brand'],
+      capacity: map['capacity'],
+      type: map['type'],
+      interface: map['interface'],
+      useCase: map['useCase'],
+    );
+  }
+}
+
+class LaptopPresetBuild {
+  final int id;
+  final String name;
+  final String type;
+  final String useCase;
+  final int cpuId;
+  final int gpuId;
+  final int ramId;
+  final int storageId;
+  final int displayId;
+  final int? batteryId;
+
+  LaptopPresetBuild({
+    required this.id,
+    required this.name,
+    required this.type,
+    required this.useCase,
+    required this.cpuId,
+    required this.gpuId,
+    required this.ramId,
+    required this.storageId,
+    required this.displayId,
+    this.batteryId,
+  });
+
+  factory LaptopPresetBuild.fromJson(Map<String, dynamic> json) {
+    return LaptopPresetBuild(
+      id: json['id'],
+      name: json['name'],
+      type: json['type'],
+      useCase: json['useCase'],
+      cpuId: json['cpuId'],
+      gpuId: json['gpuId'],
+      ramId: json['ramId'],
+      storageId: json['storageId'],
+      displayId: json['displayId'],
+      batteryId: json['batteryId'],
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'type': type,
+      'useCase': useCase,
+      'cpuId': cpuId,
+      'gpuId': gpuId,
+      'ramId': ramId,
+      'storageId': storageId,
+      'displayId': displayId,
+      'batteryId': batteryId,
+    };
+  }
+
+  factory LaptopPresetBuild.fromMap(Map<String, dynamic> map) {
+    return LaptopPresetBuild(
+      id: map['id'],
+      name: map['name'],
+      type: map['type'],
+      useCase: map['useCase'],
+      cpuId: map['cpuId'],
+      gpuId: map['gpuId'],
+      ramId: map['ramId'],
+      storageId: map['storageId'],
+      displayId: map['displayId'],
+      batteryId: map['batteryId'],
+    );
+  }
+}
+
+class LaptopDisplay {
+  final int id;
+  final String name;
+  final String resolution;
+  final double size;
+  final int refreshRate;
+  final String panelType;
+  final String useCase;
+
+  LaptopDisplay({
+    required this.id,
+    required this.name,
+    required this.resolution,
+    required this.size,
+    required this.refreshRate,
+    required this.panelType,
+    required this.useCase,
+  });
+
+  factory LaptopDisplay.fromJson(Map<String, dynamic> json) {
+    return LaptopDisplay(
+      id: json['id'],
+      name: json['name'],
+      resolution: json['resolution'],
+      size: json['size'].toDouble(),
+      refreshRate: json['refreshRate'],
+      panelType: json['panelType'],
+      useCase: json['useCase'],
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'resolution': resolution,
+      'size': size,
+      'refreshRate': refreshRate,
+      'panelType': panelType,
+      'useCase': useCase,
+    };
+  }
+
+  factory LaptopDisplay.fromMap(Map<String, dynamic> map) {
+    return LaptopDisplay(
+      id: map['id'],
+      name: map['name'],
+      resolution: map['resolution'],
+      size: map['size'],
+      refreshRate: map['refreshRate'],
+      panelType: map['panelType'],
+      useCase: map['useCase'],
+    );
+  }
+}
+
+class LaptopBattery {
+  final int id;
+  final String name;
+  final int capacity;
+  final int batteryLife;
+  final String useCase;
+
+  LaptopBattery({
+    required this.id,
+    required this.name,
+    required this.capacity,
+    required this.batteryLife,
+    required this.useCase,
+  });
+
+  factory LaptopBattery.fromJson(Map<String, dynamic> json) {
+    return LaptopBattery(
+      id: json['id'],
+      name: json['name'],
+      capacity: json['capacity'],
+      batteryLife: json['batteryLife'],
+      useCase: json['useCase'],
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'capacity': capacity,
+      'batteryLife': batteryLife,
+      'useCase': useCase,
+    };
+  }
+
+  factory LaptopBattery.fromMap(Map<String, dynamic> map) {
+    return LaptopBattery(
+      id: map['id'],
+      name: map['name'],
+      capacity: map['capacity'],
+      batteryLife: map['batteryLife'],
+      useCase: map['useCase'],
+    );
+  }
+}
+
 class CPU {
   final int id;
   final String name;

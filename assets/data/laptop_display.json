@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "17.3\" QHD 240Hz G-Sync",
+    "resolution": "2560x1440",
+    "size": 17.3,
+    "refreshRate": 240,
+    "panelType": "IPS",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "15.6\" FHD 165Hz G-Sync",
+    "resolution": "1920x1080",
+    "size": 15.6,
+    "refreshRate": 165,
+    "panelType": "IPS",
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "17.3\" UHD 120Hz",
+    "resolution": "3840x2160",
+    "size": 17.3,
+    "refreshRate": 120,
+    "panelType": "OLED",
+    "useCase": "Editing"
+  },
+  {
+    "id": 4,
+    "name": "16\" UHD+ 60Hz",
+    "resolution": "3840x2400",
+    "size": 16.0,
+    "refreshRate": 60,
+    "panelType": "IPS",
+    "useCase": "Editing"
+  },
+  {
+    "id": 5,
+    "name": "17\" UHD 60Hz",
+    "resolution": "3840x2160",
+    "size": 17.0,
+    "refreshRate": 60,
+    "panelType": "IPS",
+    "useCase": "CAD"
+  },
+  {
+    "id": 6,
+    "name": "15.6\" UHD 60Hz",
+    "resolution": "3840x2160",
+    "size": 15.6,
+    "refreshRate": 60,
+    "panelType": "IPS",
+    "useCase": "CAD"
+  },
+  {
+    "id": 7,
+    "name": "14\" QHD+ 60Hz",
+    "resolution": "2880x1800",
+    "size": 14.0,
+    "refreshRate": 60,
+    "panelType": "IPS",
+    "useCase": "Office"
+  },
+  {
+    "id": 8,
+    "name": "13.3\" FHD 60Hz",
+    "resolution": "1920x1080",
+    "size": 13.3,
+    "refreshRate": 60,
+    "panelType": "IPS",
+    "useCase": "Office"
+  }
+]

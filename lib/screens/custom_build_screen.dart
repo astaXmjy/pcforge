@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../data/models/component_models.dart';
 import '../data/repositories/component_repository.dart';
 import 'component_selection_screen.dart';
+import '../widgets/component_info_dialog.dart';
 
 class CustomBuildScreen extends StatefulWidget {
   const CustomBuildScreen({Key? key}) : super(key: key);
@@ -20,6 +21,8 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
   PSU? selectedPSU;
   int totalWattage = 0;
   List<String> supportedSoftware = [];
+  String recommendedCooling =
+      "Standard Air Cooling"; // Default cooling recommendation
 
   @override
   Widget build(BuildContext context) {
@@ -75,8 +78,24 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
                     selectedCPU = result;
                     _updateTotalWattage();
                     _updateSupportedSoftware();
+                    _updateCoolingRecommendation();
                   });
                 }
+              },
+              onInfoTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => ComponentInfoDialog(
+                    title: 'CPU (Central Processing Unit)',
+                    description:
+                        'The CPU is the primary component of a computer that performs most of the processing inside the computer. It handles all instructions it receives from hardware and software running on the computer.\n\n'
+                        'Key factors to consider:\n'
+                        '• Core Count: More cores allow for better multitasking\n'
+                        '• Clock Speed: Higher speeds (GHz) mean faster processing\n'
+                        '• TDP: Thermal Design Power indicates heat generation and power consumption',
+                    icon: Icons.memory,
+                  ),
+                );
               },
             ),
             _buildComponentCard(
@@ -110,10 +129,27 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
                     selectedGPU = result;
                     _updateTotalWattage();
                     _updateSupportedSoftware();
+                    _updateCoolingRecommendation();
                   });
                 }
               },
+              onInfoTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => ComponentInfoDialog(
+                    title: 'GPU (Graphics Processing Unit)',
+                    description:
+                        'The GPU is specialized for display functions and rendering images, animations, and video. It\'s crucial for gaming and graphics-intensive applications.\n\n'
+                        'Key factors to consider:\n'
+                        '• VRAM: Video memory for storing texture and image data\n'
+                        '• Performance: Higher benchmark scores mean better gaming performance\n'
+                        '• TDP: Indicates power consumption and heat generation',
+                    icon: Icons.videogame_asset,
+                  ),
+                );
+              },
             ),
+            // Rest of components...
             _buildComponentCard(
               title: 'RAM',
               subtitle: selectedRAM?.name ?? 'Select RAM',
@@ -147,6 +183,21 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
                     selectedRAM = result;
                   });
                 }
+              },
+              onInfoTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => ComponentInfoDialog(
+                    title: 'RAM (Random Access Memory)',
+                    description:
+                        'RAM is your computer\'s short-term memory. It temporarily stores data that your CPU needs to access quickly.\n\n'
+                        'Key factors to consider:\n'
+                        '• Capacity: More GB allows running more programs simultaneously\n'
+                        '• Speed: Higher MHz ratings mean faster data access\n'
+                        '• Type: DDR4 is the current standard, with DDR5 emerging',
+                    icon: Icons.memory_outlined,
+                  ),
+                );
               },
             ),
             _buildComponentCard(
@@ -183,6 +234,21 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
                   });
                 }
               },
+              onInfoTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => ComponentInfoDialog(
+                    title: 'Storage',
+                    description:
+                        'Storage is where all your files, programs, and the operating system are kept when not in use.\n\n'
+                        'Key factors to consider:\n'
+                        '• Type: SSDs are faster but more expensive than HDDs\n'
+                        '• Capacity: Determines how many files you can store\n'
+                        '• Interface: NVMe is faster than SATA for SSDs',
+                    icon: Icons.storage,
+                  ),
+                );
+              },
             ),
             _buildComponentCard(
               title: 'Motherboard',
@@ -218,6 +284,21 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
                   });
                 }
               },
+              onInfoTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => ComponentInfoDialog(
+                    title: 'Motherboard',
+                    description:
+                        'The motherboard is the main circuit board that connects all components together and allows them to communicate.\n\n'
+                        'Key factors to consider:\n'
+                        '• Socket Type: Must match your CPU\n'
+                        '• Chipset: Determines features and compatibility\n'
+                        '• Form Factor: Determines the physical size (ATX, Micro-ATX, etc.)',
+                    icon: Icons.developer_board,
+                  ),
+                );
+              },
             ),
             _buildComponentCard(
               title: 'Power Supply',
@@ -251,6 +332,21 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
                   });
                 }
               },
+              onInfoTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => ComponentInfoDialog(
+                    title: 'Power Supply Unit (PSU)',
+                    description:
+                        'The PSU converts mains AC electricity to low-voltage DC power for the components inside the computer.\n\n'
+                        'Key factors to consider:\n'
+                        '• Wattage: Must be sufficient for all components\n'
+                        '• Certification: 80+ ratings (Bronze, Silver, Gold, etc.) indicate efficiency\n'
+                        '• Modularity: Modular PSUs allow you to use only the cables you need',
+                    icon: Icons.electrical_services,
+                  ),
+                );
+              },
             ),
             const SizedBox(height: 24),
             Card(
@@ -275,6 +371,12 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
                       'Total Power Consumption',
                       '$totalWattage W',
                       Icons.power,
+                    ),
+                    const SizedBox(height: 12),
+                    _buildMetricRow(
+                      'Recommended Cooling',
+                      recommendedCooling,
+                      Icons.ac_unit,
                     ),
                     const SizedBox(height: 16),
                     const Text(
@@ -354,6 +456,7 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
     required String subtitle,
     required List<String> details,
     required VoidCallback onTap,
+    required VoidCallback onInfoTap,
   }) {
     return Card(
       elevation: 2,
@@ -369,20 +472,44 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // Use Flexible to prevent text overflow in title
+                  Flexible(
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.info_outline),
+                    onPressed: onInfoTap,
+                    tooltip: 'Component Information',
+                    color: Colors.blue,
+                    constraints: const BoxConstraints(
+                      minWidth: 36,
+                      minHeight: 36,
+                    ),
+                    padding: EdgeInsets.zero,
+                    iconSize: 20,
+                  ),
+                ],
               ),
               const SizedBox(height: 8),
+              // Use Flexible for subtitle text to prevent overflow
               Text(
                 subtitle,
                 style: TextStyle(
                   fontSize: 16,
                   color: subtitle.startsWith('Select') ? Colors.grey : null,
                 ),
+                overflow: TextOverflow.ellipsis,
+                maxLines: 2,
               ),
               if (details.isNotEmpty) ...[
                 const SizedBox(height: 8),
@@ -394,6 +521,7 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
                           fontSize: 14,
                           color: Colors.grey,
                         ),
+                        overflow: TextOverflow.ellipsis,
                       ),
                     )),
               ],
@@ -409,18 +537,27 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
       children: [
         Icon(icon, size: 20, color: Theme.of(context).primaryColor),
         const SizedBox(width: 8),
-        Text(
-          label,
-          style: const TextStyle(
-            fontSize: 16,
+        // Wrap label in Expanded to prevent overflow
+        Expanded(
+          child: Text(
+            label,
+            style: const TextStyle(
+              fontSize: 16,
+            ),
+            overflow: TextOverflow.ellipsis,
           ),
         ),
-        const Spacer(),
-        Text(
-          value,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
+        const SizedBox(width: 8), // Add spacing between label and value
+        // Wrap value in flexible to handle long text
+        Flexible(
+          child: Text(
+            value,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.right,
           ),
         ),
       ],
@@ -452,6 +589,28 @@ class _CustomBuildScreenState extends State<CustomBuildScreen> {
       setState(() {
         supportedSoftware = software;
       });
+    }
+  }
+
+  void _updateCoolingRecommendation() {
+    // Base cooling recommendation on CPU TDP and GPU TDP
+    if (selectedCPU != null && selectedGPU != null) {
+      int totalTDP = selectedCPU!.tdp + selectedGPU!.tdp;
+
+      // Higher TDP values typically require more robust cooling
+      if (totalTDP > 300) {
+        setState(() {
+          recommendedCooling = "Liquid Cooling Required";
+        });
+      } else if (totalTDP > 200) {
+        setState(() {
+          recommendedCooling = "High-Performance Air/AIO";
+        });
+      } else {
+        setState(() {
+          recommendedCooling = "Standard Air Cooling";
+        });
+      }
     }
   }
 }

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "High-End Gaming Laptop",
+    "type": "Laptop",
+    "useCase": "Gaming",
+    "cpuId": 1,
+    "gpuId": 1,
+    "ramId": 1,
+    "storageId": 1,
+    "displayId": 1,
+    "batteryId": 1
+  },
+  {
+    "id": 2,
+    "name": "Mid-Range Gaming Laptop",
+    "type": "Laptop",
+    "useCase": "Gaming",
+    "cpuId": 2,
+    "gpuId": 2,
+    "ramId": 2,
+    "storageId": 2,
+    "displayId": 2,
+    "batteryId": 2
+  },
+  {
+    "id": 3,
+    "name": "Professional Video Editing Laptop",
+    "type": "Laptop",
+    "useCase": "Editing",
+    "cpuId": 3,
+    "gpuId": 3,
+    "ramId": 3,
+    "storageId": 3,
+    "displayId": 3,
+    "batteryId": 3
+  },
+  {
+    "id": 4,
+    "name": "Mid-Range Editing Laptop",
+    "type": "Laptop",
+    "useCase": "Editing",
+    "cpuId": 4,
+    "gpuId": 4,
+    "ramId": 4,
+    "storageId": 4,
+    "displayId": 4,
+    "batteryId": 4
+  },
+  {
+    "id": 5,
+    "name": "CAD Workstation Laptop",
+    "type": "Laptop",
+    "useCase": "CAD",
+    "cpuId": 5,
+    "gpuId": 5,
+    "ramId": 5,
+    "storageId": 5,
+    "displayId": 5,
+    "batteryId": 5
+  },
+  {
+    "id": 6,
+    "name": "Mid-Range CAD Laptop",
+    "type": "Laptop",
+    "useCase": "CAD",
+    "cpuId": 6,
+    "gpuId": 6,
+    "ramId": 6,
+    "storageId": 6,
+    "displayId": 6,
+    "batteryId": 6
+  },
+  {
+    "id": 7,
+    "name": "Office Laptop",
+    "type": "Laptop",
+    "useCase": "Office",
+    "cpuId": 7,
+    "gpuId": 7,
+    "ramId": 7,
+    "storageId": 7,
+    "displayId": 7,
+    "batteryId": 7
+  },
+  {
+    "id": 8,
+    "name": "Mid-Range Office Laptop",
+    "type": "Laptop",
+    "useCase": "Office",
+    "cpuId": 8,
+    "gpuId": 8,
+    "ramId": 8,
+    "storageId": 8,
+    "displayId": 8,
+    "batteryId": 8
+  }
+]

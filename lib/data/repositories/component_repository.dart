@@ -143,4 +143,154 @@ class ComponentRepository {
 
     return supportedSoftware.toList();
   }
+  // Add these methods to the ComponentRepository class
+
+// Laptop CPU methods
+  Future<List<LaptopCPU>> getAllLaptopCPUs() async {
+    return await _databaseHelper.getLaptopCPUs();
+  }
+
+  Future<List<LaptopCPU>> getLaptopCPUsByUseCase(String useCase) async {
+    return await _databaseHelper.getLaptopCPUsByUseCase(useCase);
+  }
+
+  Future<LaptopCPU?> getLaptopCPUById(int id) async {
+    return await _databaseHelper.getLaptopCPUById(id);
+  }
+
+// Laptop GPU methods
+  Future<List<LaptopGPU>> getAllLaptopGPUs() async {
+    return await _databaseHelper.getLaptopGPUs();
+  }
+
+  Future<List<LaptopGPU>> getLaptopGPUsByUseCase(String useCase) async {
+    return await _databaseHelper.getLaptopGPUsByUseCase(useCase);
+  }
+
+  Future<LaptopGPU?> getLaptopGPUById(int id) async {
+    return await _databaseHelper.getLaptopGPUById(id);
+  }
+
+// Laptop RAM methods
+  Future<List<LaptopRAM>> getAllLaptopRAMs() async {
+    return await _databaseHelper.getLaptopRAMs();
+  }
+
+  Future<List<LaptopRAM>> getLaptopRAMsByUseCase(String useCase) async {
+    return await _databaseHelper.getLaptopRAMsByUseCase(useCase);
+  }
+
+  Future<LaptopRAM?> getLaptopRAMById(int id) async {
+    return await _databaseHelper.getLaptopRAMById(id);
+  }
+
+// Laptop Storage methods
+  Future<List<LaptopStorage>> getAllLaptopStorages() async {
+    return await _databaseHelper.getLaptopStorages();
+  }
+
+  Future<List<LaptopStorage>> getLaptopStoragesByUseCase(String useCase) async {
+    return await _databaseHelper.getLaptopStoragesByUseCase(useCase);
+  }
+
+  Future<LaptopStorage?> getLaptopStorageById(int id) async {
+    return await _databaseHelper.getLaptopStorageById(id);
+  }
+
+// Laptop Display methods
+  Future<List<LaptopDisplay>> getAllLaptopDisplays() async {
+    return await _databaseHelper.getLaptopDisplays();
+  }
+
+  Future<List<LaptopDisplay>> getLaptopDisplaysByUseCase(String useCase) async {
+    return await _databaseHelper.getLaptopDisplaysByUseCase(useCase);
+  }
+
+  Future<LaptopDisplay?> getLaptopDisplayById(int id) async {
+    return await _databaseHelper.getLaptopDisplayById(id);
+  }
+
+// Laptop Battery methods
+  Future<List<LaptopBattery>> getAllLaptopBatteries() async {
+    return await _databaseHelper.getLaptopBatteries();
+  }
+
+  Future<List<LaptopBattery>> getLaptopBatteriesByUseCase(
+      String useCase) async {
+    return await _databaseHelper.getLaptopBatteriesByUseCase(useCase);
+  }
+
+  Future<LaptopBattery?> getLaptopBatteryById(int id) async {
+    return await _databaseHelper.getLaptopBatteryById(id);
+  }
+
+// Laptop Preset Build methods
+  Future<List<LaptopPresetBuild>> getAllLaptopPresetBuilds() async {
+    return await _databaseHelper.getLaptopPresetBuilds();
+  }
+
+  Future<List<LaptopPresetBuild>> getLaptopPresetBuildsByTypeAndUseCase(
+      String type, String useCase) async {
+    return await _databaseHelper.getLaptopPresetBuildsByTypeAndUseCase(
+        type, useCase);
+  }
+
+  Future<LaptopPresetBuild?> getLaptopPresetBuildById(int id) async {
+    return await _databaseHelper.getLaptopPresetBuildById(id);
+  }
+
+// Calculate battery life for a laptop build
+  Future<int> calculateEstimatedBatteryLife({
+    required int cpuId,
+    required int gpuId,
+    int? batteryId,
+  }) async {
+    int estimatedBatteryLife = 0;
+
+    final cpu = await getLaptopCPUById(cpuId);
+    final gpu = await getLaptopGPUById(gpuId);
+
+    // Base calculation on CPU and GPU TDP (higher TDP = lower battery life)
+    if (cpu != null && gpu != null) {
+      int totalTDP = cpu.tdp + gpu.tdp;
+
+      // Simple inverse relation between TDP and battery life
+      estimatedBatteryLife = 10 - (totalTDP ~/ 20);
+
+      // Apply minimum battery life of 2 hours
+      estimatedBatteryLife =
+          estimatedBatteryLife < 2 ? 2 : estimatedBatteryLife;
+
+      // If we have a specific battery
+      if (batteryId != null) {
+        final battery = await getLaptopBatteryById(batteryId);
+        if (battery != null) {
+          // Adjust for specific battery
+          estimatedBatteryLife = battery.batteryLife;
+        }
+      }
+    }
+
+    return estimatedBatteryLife;
+  }
+
+// Get supported software for a laptop build
+  Future<List<String>> getLaptopSupportedSoftware({
+    required int cpuId,
+    required int gpuId,
+  }) async {
+    Set<String> supportedSoftware = {};
+
+    final cpu = await getLaptopCPUById(cpuId);
+    if (cpu != null) {
+      supportedSoftware.addAll(cpu.supportedSoftware);
+    }
+
+    final gpu = await getLaptopGPUById(gpuId);
+    if (gpu != null) {
+      supportedSoftware.addAll(gpu.supportedSoftware);
+    }
+
+    return supportedSoftware.toList();
+  }
 }

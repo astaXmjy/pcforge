@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "NVIDIA GeForce RTX 3080 Ti Laptop",
+    "brand": "NVIDIA",
+    "vram": 16,
+    "tdp": 150,
+    "benchmarkScore": 19000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit", "SolidWorks"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 2,
+    "name": "NVIDIA GeForce RTX 3070 Ti Laptop",
+    "brand": "NVIDIA",
+    "vram": 8,
+    "tdp": 120,
+    "benchmarkScore": 15000,
+    "supportedSoftware": ["Adobe Premiere Pro", "Blender", "Unreal Engine", "AutoCAD", "Revit"],
+    "useCase": "Gaming"
+  },
+  {
+    "id": 3,
+    "name": "NVIDIA RTX A5000 Laptop",
+    "brand": "NVIDIA",
+    "vram": 16,
+    "tdp": 140,
+    "benchmarkScore": 17000,
+    "supportedSoftware": ["Adobe Premiere Pro", "DaVinci Resolve", "Blender", "Maya", "After Effects"],
+    "useCase": "Editing"
+  },
+  {
+    "id": 4,
+    "name": "AMD Radeon Pro W6800M",
+    "brand": "AMD",
+    "vram": 12,
+    "tdp": 120,
+    "benchmarkScore": 15000,
+    "supportedSoftware": ["Adobe Premiere Pro", "DaVinci Resolve", "Blender", "Maya", "After Effects"],
+    "useCase": "Editing"
+  },
+  {
+    "id": 5,
+    "name": "NVIDIA RTX A4500 Laptop",
+    "brand": "NVIDIA",
+    "vram": 16,
+    "tdp": 100,
+    "benchmarkScore": 16000,
+    "supportedSoftware": ["AutoCAD", "Revit", "SolidWorks", "CATIA", "Blender"],
+    "useCase": "CAD"
+  },
+  {
+    "id": 6,
+    "name": "NVIDIA RTX A3000 Laptop",
+    "brand": "NVIDIA",
+    "vram": 6,
+    "tdp": 80,
+    "benchmarkScore": 13000,
+    "supportedSoftware": ["AutoCAD", "Revit", "SolidWorks", "Blender"],
+    "useCase": "CAD"
+  },
+  {
+    "id": 7,
+    "name": "Intel Iris Xe Graphics",
+    "brand": "Intel",
+    "vram": 4,
+    "tdp": 15,
+    "benchmarkScore": 4000,
+    "supportedSoftware": ["Microsoft Office", "Web Browsing", "Light Gaming"],
+    "useCase": "Office"
+  },
+  {
+    "id": 8,
+    "name": "AMD Radeon 680M",
+    "brand": "AMD",
+    "vram": 2,
+    "tdp": 15,
+    "benchmarkScore": 5000,
+    "supportedSoftware": ["Microsoft Office", "Web Browsing", "Light Gaming"],
+    "useCase": "Office"
+  }
+]
